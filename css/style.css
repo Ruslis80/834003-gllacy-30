@@ -367,14 +367,12 @@ textarea[name="comment"]:hover {
   margin-left: 20px;
 }
 
-
-
 .navigation-entrance:hover,
 .navigation-basket:hover {
   background: var(--basic-white);
 }
 
-/*.navigation-entrance a:hover,*/.entrance a:hover,
+.entrance a:hover,
 .basket a:hover,
 .navigation-search:hover svg path,
 .navigation-entrance:hover svg path,
@@ -1093,6 +1091,16 @@ fieldset:nth-child(4n) {
 .footer-social {
   margin: 15px 0 35px 0;
   padding: 0;
+}
+
+.social-button:hover,
+.social-button:focus {
+  background-color: var(--basic-dark-grayish-cyan);
+}
+
+.social-button:hover path,
+.social-button:focus path {
+  fill-opacity: 1;
 }
 
 .footer-documents {
