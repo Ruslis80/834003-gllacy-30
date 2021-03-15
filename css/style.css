@@ -36,7 +36,6 @@
 }
 
 .page-body {
-  /*position: relative;*/
   min-width: 1200px;
   margin: 0;
   padding: 0;
@@ -79,6 +78,20 @@ img {
   height: auto;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+
 /*   Global wrapping   */
 
 .site-wrapper {
@@ -108,6 +121,11 @@ img {
   width: 1146px;
   margin: 0 auto;
   padding: 0 20px;
+}
+
+.main-container .creamy {
+  margin-top: 13px;
+  margin-bottom: 29px;
 }
 
 /* Main header */
@@ -466,7 +484,7 @@ fieldset:nth-child(4n) {
 }
 
 
-label {
+.filter label {
   font-weight: 500;
   font-style: normal;
   font-size: 16px;
@@ -685,6 +703,10 @@ label {
   margin: 0 auto;
 }
 
+.tovar-catalog {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
 .tovar-list {
   display: flex;
   flex-wrap: wrap;
@@ -881,12 +903,8 @@ label {
   border-radius: 16px;
 }
 
-.subscription h2 {
-  margin: 0;
-}
-
 .subscription p {
-  margin: 10px 16px 47px 20px;
+  margin: 29px 16px 47px 20px;
   font-weight: normal;
   font-size: 16px;
   line-height: 22px;
@@ -948,12 +966,16 @@ label {
 /* Map */
 
 .contacts {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
   width: 1200px;
   height: 430px;
   background: url(../img/icons/morozhenko-carta.svg) no-repeat 265px 135px,
               url(../img/fons/cart.png) no-repeat;
+}
+
+.contacts .contact-wrap {
+  width: 1146px;
+  display: grid;
+  grid-template-columns: 1fr;
 }
 
 .contacts .address {
@@ -1048,6 +1070,8 @@ label {
 
 .main-footer {
   display: grid;
+  min-width: 1200px;
+  margin-top: 18px;
 }
 
 .main-footer h2 {
@@ -1057,6 +1081,7 @@ label {
 .main-footer-info {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  width: 1146px;
 }
 
 .footer-social,
