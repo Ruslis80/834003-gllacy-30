@@ -335,7 +335,6 @@ input[type="password"]:hover,
 textarea[name="comment"]:hover {
   outline: none;
   border: 2px solid var(--basic-hover);
-  border-radius: 4px;
 }
 
  input[type="text"]:focus,
@@ -344,7 +343,6 @@ textarea[name="comment"]:hover {
  textarea[name="comment"]:focus {
   outline: none;
   border: 2px solid var(--basic-focus);
-  border-radius: 4px;
 }
 
 
@@ -1171,6 +1169,7 @@ fieldset:nth-child(4n) {
 .wrapping-modal {
   width: 241px;
   margin: 0 auto;
+  padding-top: 20px;
 }
 
 .modal h2 {
