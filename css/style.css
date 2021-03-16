@@ -45,6 +45,8 @@
   line-height: 22px;
   font-weight: 700;
   color: var(--basic-white);
+  background-color: var(--basic-dark-grayish-cyan);
+  background-repeat: no-repeat;
 
 
   min-height: 100%;
@@ -96,6 +98,7 @@ img {
 
 .site-wrapper {
   min-width: 1200px;
+  margin: 0;
   background-repeat: no-repeat;
   background-position: top center;
 }
@@ -1045,7 +1048,7 @@ fieldset:nth-child(4n) {
 /* Map */
 
 .contacts {
-  width: 1200px;
+  width: 1146px;
   height: 430px;
   background: url(../img/icons/morozhenko-carta.svg) no-repeat 265px 135px,
               url(../img/fons/cart.png) no-repeat;
