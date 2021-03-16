@@ -1099,51 +1099,66 @@ fieldset:nth-child(4n) {
 
 /* Pagination */
 
-.pagination {
-  display: grid;
-  width: 1146px;
-}
-
 .pagination-list {
-  display: grid;
-  width: 194px;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  justify-self: right;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
   padding: 0;
+  margin: 0;
+  margin-bottom: 30px;
   list-style: none;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
 }
 
-.pagination-list li {
-  justify-self: center;
+.pagination-item {
+  margin-right: 5px;
 }
 
-.pagination-list a {
+.pagination-item:last-child {
+  margin-right: 0;
+}
+
+.pagination-item a {
+  display: block;
+  padding: 5px 10px;
+  border-radius: 50%;
   color: var(--basic-white);
   text-decoration: none;
 }
 
 .pagination-item a:hover {
-  background: rgba(255, 255, 255, 0.2);
-  padding: 5px 10px;
-  border-radius: 50%;
+  color: var(--basic-white);
+  background-color: var(--basic-border-bottom);
 }
 
 .pagination-item a:focus,
 .pagination-item a:active {
-  background-color: var(--basic-white);
   color: var(--basic-very-dark-gray);
-  padding: 5px 10px;
-  border-radius: 50%;
+  background-color: var(--basic-white);
+
 }
 
 .pagination-item-current a,
 .pagination-item-current a:hover,
 .pagination-item-current a:focus,
 .pagination-item-current a:active {
-  background-color: var(--basic-white);
   color: var(--basic-very-dark-gray);
+  background-color: var(--basic-white);
+}
+
+.pagination-item-back a,
+.pagination-item-onward a {
+  display: block;
+  margin-right: 5px;
   padding: 5px 10px;
-  border-radius: 50%;
+}
+
+.pagination-item-onward a {
+  margin-right: 0;
+  padding-right: 0;
 }
 
 /* Main footer */
