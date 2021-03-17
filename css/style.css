@@ -462,8 +462,6 @@ textarea[name="comment"]:hover {
   font-style: normal;
   font-size: 16px;
   line-height: 18px;
-  outline: 5px solid #2e88e4;
-  outline-offset: -5px;
   margin-bottom: 40px;
 }
 
@@ -471,15 +469,13 @@ textarea[name="comment"]:hover {
   display: flex;
   flex-wrap: wrap;
   width: 869px;
-  outline: 4px solid #696969;
-  outline-offset: -4px;
 }
 
 .filter fieldset {
   margin: 0;
   padding: 0;
   margin-left: 15px;
-  margin-bottom: 14px;
+  margin-bottom: 6px;
   border: none;
 }
 
@@ -691,13 +687,28 @@ fieldset:nth-child(4n) {
 
 /* Checkbox */
 
+.checkbox-control {
+  width: 711px;
+  height: 36px;
+  background-color: var(--basic-border-bottom);
+  border-radius: 20px;
+}
+
+.checkbox-control .control-filler {
+  display: flex;
+}
+
+.filter-checkbox {
+  padding-left: 55px;
+}
+
 .filter-input-checkbox + label::before {
   content: "";
   position: absolute;
-  left: -2px;
-  top: 0;
-  width: 16px;
-  height: 16px;
+  top: -2px;
+  left: -35px;
+  width: 17px;
+  height: 17px;
   border: 2px solid var(--basic-white);
   opacity: 0.8;
 }
@@ -705,8 +716,8 @@ fieldset:nth-child(4n) {
 .filter-input-checkbox:checked + label::after {
   content: "";
   position: absolute;
-  top: 0;
-  left: -2px;
+  top: -2px;
+  left: -35px;
   width: 24px;
   height: 24px;
   background-image: url("../img/svg/input-checkbox.svg");
@@ -714,24 +725,14 @@ fieldset:nth-child(4n) {
   background-position: 0 0;
 }
 
-/*.filter-option {
-  width: 425px;
-  height: 36px;
-}*/
-
-.filter .filler {
+.filter-item .filler {
   margin-bottom: 11px;
 }
-
-/*.sorting-of-fillers-catalog {
-  display: flex;
-  width: 711px;
-}*/
 
 .filters button {
   width: 144px;
   height: 36px;
-  margin-top: 25px;
+  margin-top: 28px;
   margin-left: 14px;
   background: rgba(255, 255, 255, 0.2);
   border: 2px solid #FFFFFF;
