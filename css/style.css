@@ -722,8 +722,9 @@ fieldset:nth-child(4n) {
   top: -2px;
   left: -35px;
   width: 17px;
-  height: 17px;
+  height: 16px;
   border: 2px solid var(--basic-white);
+  border-radius: 3px;
   opacity: 0.8;
 }
 
@@ -737,6 +738,10 @@ fieldset:nth-child(4n) {
   background-image: url("../img/svg/input-checkbox.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
+}
+
+.filter-input-checkbox:checked + label::before {
+  content: none;
 }
 
 .filter-item .filler {
