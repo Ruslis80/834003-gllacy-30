@@ -82,26 +82,16 @@
               <form class="filter" method="POST" action="https://echo.htmlacademy.ru">
                <fieldset class="filter-item">
                  <legend>Сортировка:</legend>
-                 <div cla
-                  <select class="filter-popularity" name="popularity-catalog">
-                    <option value="by-popularity">по популярности</option>
-                    <option value="cheap-ones-first">сначала недорогие</option>
-                    <option value="dear-ones-first">сначала дорогие</option>
-                    <option value="fatness">по жирности</option>
-                  </select>
+                 <div class="sorting-filter">
+                   <select name="popularity-catalog">
+                     <option value="by-popularity">по популярности</option>
+                     <option value="cheap-ones-first">сначала недорогие</option>
+                     <option value="dear-ones-first">сначала дорогие</option>
+                     <option value="fatness">по жирности</option>
+                   </select>
                  </div>
-                 <!--<ul class="choice-of-filter">
-                   <li class="sorting-catalog">
-                     <select name="popularity-catalog">
-                       <option value="by-popularity">по популярности</option>
-                       <option value="cheap-ones-first">сначала недорогие</option>
-                       <option value="dear-ones-first">сначала дорогие</option>
-                       <option value="fatness">по жирности</option>
-                     </select>
-                   </li>
-                  </ul>-->
                </fieldset>
-               <fieldset class="filter-item">
+               <fieldset class="filter-items">
                  <legend><!--Цена: 100 ₽ – 500 ₽--></legend>
                  <div class="range-filter">
                   <div class="price-controls">
@@ -122,30 +112,32 @@
                    </div>
                   </div>
                </fieldset>
-               <fieldset>
+               <fieldset class="filter-item">
                  <legend>Жирность:</legend>
-                 <ul class="choice-of-filter fat">
-                   <li class="filter-option filter-radio">
-                     <input class="visually-hidden filter-input-radio filter-input" type="radio" name="greasy-ice-cream" value="zero" id="filter-fat-zero">
-                     <label for="filter-fat-zero"> 0%</label>
-                   </li>
-                   <li class="filter-option filter-radio">
-                     <input class="visually-hidden filter-input-radio filter-input" type="radio" name="greasy-ice-cream" value="up-to-ten" id="filter-fat-to-ten" checked>
-                     <label for="filter-fat-to-ten"> до 10%</label>
-                   </li>
-                   <li class="filter-option filter-radio">
-                     <input class="visually-hidden filter-input-radio filter-input" type="radio" name="greasy-ice-cream" value="up-to-thirty" id="filter-fat-to-thirty">
-                     <label for="filter-fat-to-thirty"> до 30%</label>
-                   </li>
-                   <li class="filter-option filter-radio">
-                     <input class="visually-hidden filter-input-radio filter-input" type="radio" name="greasy-ice-cream" value="above-thirty" id="filter-fat-above-thirty">
-                     <label for="filter-fat-above-thirty"> выше 30%</label>
-                   </li>
-                  </ul>
+                 <div class="radio-control">
+                   <ul class="control-fat">
+                     <li class="filter-option filter-radio">
+                       <input class="visually-hidden filter-input-radio filter-input" type="radio" name="greasy-ice-cream" value="zero" id="filter-fat-zero">
+                       <label class="fat-zero" for="filter-fat-zero"> 0%</label>
+                     </li>
+                     <li class="filter-option filter-radio">
+                       <input class="visually-hidden filter-input-radio filter-input" type="radio" name="greasy-ice-cream" value="up-to-ten" id="filter-fat-to-ten" checked>
+                       <label for="filter-fat-to-ten"> до 10%</label>
+                     </li>
+                     <li class="filter-option filter-radio">
+                       <input class="visually-hidden filter-input-radio filter-input" type="radio" name="greasy-ice-cream" value="up-to-thirty" id="filter-fat-to-thirty">
+                       <label for="filter-fat-to-thirty"> до 30%</label>
+                     </li>
+                     <li class="filter-option filter-radio">
+                       <input class="visually-hidden filter-input-radio filter-input" type="radio" name="greasy-ice-cream" value="above-thirty" id="filter-fat-above-thirty">
+                       <label for="filter-fat-above-thirty"> выше 30%</label>
+                     </li>
+                   </ul>
+                  </div>
                </fieldset>
-               <fieldset>
+               <fieldset class="filter-item">
                  <legend class="filler">Наполнители:</legend>
-                 <ul class="choice-of-filter sorting-of-fillers-catalog">
+                 <ul class="control-filler">
                    <li class="filter-option filter-checkbox">
                      <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="chocolate" id="filter-chocolate-ice-cream" checked>
                      <label for="filter-chocolate-ice-cream">шоколадные</label>
