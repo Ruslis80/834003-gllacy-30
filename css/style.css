@@ -3,6 +3,7 @@
 :root {
   --basic-very-dark-gray: #323232;
   --basic-dark-gray: #999999;
+  --basic-gray: #ababab;
   --basic-dark-grayish-cyan: #849d8f;
   --basic-very-light-gray: #ededed;
   --basic-light-grayish-cyan: #d7f2e3;
@@ -27,6 +28,8 @@
   --basic-hover: rgba(178, 178, 178, 0.52);
   --basic-focus: rgba(46, 136, 228, 0.52);
   --basic-border-bottom: rgba(255, 255, 255, 0.2);
+  --basic-scale: rgba(248, 247, 244, 0.5);
+  --basic-price: linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%);
 }
 
 /* Grid */
@@ -348,12 +351,13 @@ img {
   border-radius: 0;
 }
 
+/* Input */
+
 input[type="text"]:hover,
 input[type="email"]:hover,
 input[type="password"]:hover,
 textarea[name="comment"]:hover {
   outline: none;
-  border: 2px solid var(--basic-hover);
 }
 
  input[type="text"]:focus,
@@ -361,7 +365,6 @@ textarea[name="comment"]:hover {
  input[type="password"]:focus,
  textarea[name="comment"]:focus {
   outline: none;
-  border: 2px solid var(--basic-focus);
 }
 
 
@@ -498,23 +501,45 @@ fieldset:nth-child(4n) {
   padding: 0;
   margin: 0;
   list-style: none;
-  text-align: center;
-}
-
-.filter select {
-  margin-top: 7px;
 }
 
 .filter input {
   margin-top: 10px;
 }
 
-.choice-of-filter {
+/*.choice-of-filter {
   border: none;
   background: rgba(255, 255, 255, 0.2);
   border-radius: 20px;
+}*/
+
+/* Sorting */
+
+.sorting-filter {
+  display: flex;
+  justify-content: center;
+  width: 196px;
+  height: 36px;
+  border-radius: 20px;
 }
 
+.sorting-filter select {
+  width: 196px;
+  border: none;
+  border-radius: 20px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  background-color: var(--basic-border-bottom);
+  color: var(--basic-white);
+}
+
+.filter-pop {
+  margin-left: 20px;
+}
+
+/* Radio */
 
 .filter-option label {
   position: relative;
@@ -550,14 +575,126 @@ fieldset:nth-child(4n) {
   opacity: 0.8;
 }
 
+.popularity-catalog {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+}
+
+.filter-item {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+
+/* Range */
+
+.range-filter {
+  width: 218px;
+}
+
+.filter-item legend {
+  margin: 0;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.range-controls {
+  position: relative;
+  height: 20px;
+  padding-top: 18px;
+  padding-left: 21px;
+  padding-right: 21px;
+  border-radius: 20px;
+  background-color: var(--basic-border-bottom);
+}
+
+.range-controls .scale {
+  height: 2px;
+  background: var(--basic-scale);
+}
+
+.range-controls .bar {
+  width: 65%;
+  margin-left: 15px;
+  height: 2px;
+  background-color: var(--basic-light-grayish-yellow);
+}
+
+.range-controls .toggle {
+  position: absolute;
+  top: 8px;
+  left: 0;
+  width: 4px;
+  height: 4px;
+  padding: 0;
+  border: 9px solid var(--basic-white);
+  background-color: var(--basic-gray);
+  border-radius: 50%;
+}
+
+.range-controls .toggle-min {
+  left: 35px;
+}
+
+.range-controls .toggle-max {
+  left: 130px;
+}
+
+.price-controls {
+  position: relative;
+  display: flex;
+  margin-left: 15px;
+  margin-bottom: 7px;
+}
+
+.price-controls label {
+  font-family: "Roboto", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.price-controls input {
+  width: 25px;
+  margin: 0;
+  padding: 0;
+  margin-left: 5px;
+  border: none;
+  background: var(--basic-price);
+  color: var(--basic-white);
+}
+
+.price-controls .price-line {
+  position: absolute;
+  top: 7px;
+  left: 82px;
+  width: 7px;
+  height: 2px;
+  background-color: var(--basic-white);
+}
+
+.price-controls .max-price {
+  margin-left: 9px;
+}
+
+/* Checkbox */
+
+.fat {
+  display: flex;
+  width: 425px;
+}
 
 .filter-input-checkbox + label::before {
   content: "";
   position: absolute;
   left: -2px;
   top: 0;
-  width: 20px;
-  height: 20px;
+  width: 16px;
+  height: 16px;
   border: 2px solid var(--basic-white);
   opacity: 0.8;
 }
@@ -572,26 +709,6 @@ fieldset:nth-child(4n) {
   background-image: url("../img/svg/input-checkbox.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
-}
-
-.sorting-catalog {
-  width: 196px;
-  height: 36px;
-}
-
-.popularity-catalog {
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 20px;
-}
-
-.price-sorting-catalog {
-  width: 218px;
-  height: 36px;
-}
-
-.fat {
-  display: flex;
-  width: 425px;
 }
 
 .filter-option {

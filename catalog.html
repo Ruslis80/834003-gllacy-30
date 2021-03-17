@@ -80,9 +80,17 @@
            <section class="filters">
              <h2 class="visually-hidden">Выбор мороженого</h2>
               <form class="filter" method="POST" action="https://echo.htmlacademy.ru">
-               <fieldset>
+               <fieldset class="filter-item">
                  <legend>Сортировка:</legend>
-                 <ul class="choice-of-filter">
+                 <div cla
+                  <select class="filter-popularity" name="popularity-catalog">
+                    <option value="by-popularity">по популярности</option>
+                    <option value="cheap-ones-first">сначала недорогие</option>
+                    <option value="dear-ones-first">сначала дорогие</option>
+                    <option value="fatness">по жирности</option>
+                  </select>
+                 </div>
+                 <!--<ul class="choice-of-filter">
                    <li class="sorting-catalog">
                      <select name="popularity-catalog">
                        <option value="by-popularity">по популярности</option>
@@ -91,15 +99,28 @@
                        <option value="fatness">по жирности</option>
                      </select>
                    </li>
-                  </ul>
+                  </ul>-->
                </fieldset>
-               <fieldset>
-                 <legend>Цена: 100 ₽ – 500 ₽</legend>
-                 <ul class="choice-of-filter">
-                   <li class="price-sorting-catalog">
-                     <input type="range" min="100" max="500">
-                   </li>
-                 </ul>
+               <fieldset class="filter-item">
+                 <legend><!--Цена: 100 ₽ – 500 ₽--></legend>
+                 <div class="range-filter">
+                  <div class="price-controls">
+                    <label class="min-price">
+                      Цена:<input type="text" name="min-price" value="100"> &#8381;
+                    </label>
+                    <div class="price-line"></div>
+                    <label class="max-price">
+                      <input type="text" name="max-price" value="500"> &#8381;
+                    </label>
+                   </div>
+                   <div class="range-controls">
+                     <div class="scale">
+                       <div class="bar"></div>
+                     </div>
+                     <div class="toggle toggle-min"></div>
+                     <div class="toggle toggle-max"></div>
+                   </div>
+                  </div>
                </fieldset>
                <fieldset>
                  <legend>Жирность:</legend>
