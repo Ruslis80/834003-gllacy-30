@@ -29,7 +29,8 @@
   --basic-focus: rgba(46, 136, 228, 0.52);
   --basic-border-bottom: rgba(255, 255, 255, 0.2);
   --basic-scale: rgba(248, 247, 244, 0.5);
-  --basic-price: linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%);
+  --basic-backlight: linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%);
+  --basic-price: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%);
 }
 
 /* Grid */
@@ -119,6 +120,15 @@ img {
 .site-wrapper-3 {
   background-color: var(--basic-dark-grayish-orange);
   background-image: url(../img/slide/slider-item-3.png);
+}
+
+.page-body-catalog .backlight {
+  min-width: 1200px;
+  max-height: 656px;
+  margin: 0;
+  background: var(--basic-backlight);
+  background-repeat: no-repeat;
+  background-position: top center;
 }
 
 /*   Content wrapper   */
@@ -292,6 +302,7 @@ img {
 }
 
 .info p {
+  margin-bottom: 10px;
   padding-left: 15px;
   font-size: 14px;
   line-height: 16px;
