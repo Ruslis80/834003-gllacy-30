@@ -238,8 +238,10 @@ img {
 }
 
 .dropdown-content {
-  display: none;
+  /*display: none;*/
   position: absolute;
+  top: 25px;
+  left: -5px;
   background-color: var(--basic-white);
   min-width: 143px;
   box-shadow: 0px 20px 20px rgba(0,0,0,0.4);
@@ -249,13 +251,34 @@ img {
 
 .dropdown-content a {
   color: var(--basic-very-dark-gray);
-  padding: 12px 16px;
+  padding: 10px 14px;
   text-decoration: none;
   display: block;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
   line-height: 16px;
+}
+
+.dropdown-content a:first-child {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.dropdown-content a:first-child:hover,
+.dropdown-content a:first-child:focus,
+.dropdown-content a:first-child:active {
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+.dropdown-content a:last-child:hover,
+.dropdown-content a:last-child:focus,
+.dropdown-content a:last-child:active {
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
 }
 
 .dropdown-content a:hover {
@@ -269,6 +292,13 @@ img {
 
 .dropdown:hover .dropdown-content {
   display: block;
+}
+
+.dropdown-content .dropdown-content-line {
+  width: 128px;
+  height: 0;
+  margin: 0 auto;
+  border-bottom: 1px solid var(--basic-border-list-ice);
 }
 
 /*.dropdown-content {
@@ -290,10 +320,7 @@ img {
   border: 1px solid #d84732;
 }
 
-.dropdown-content li:nth-child(1) {
-  border-bottom: 1px solid var(--basic-border-list-ice);
 
-}
 
 .dropdown-content .drop-down-list {
   margin: 0;
@@ -363,6 +390,7 @@ img {
 }
 
 .navigation-search {
+  position: relative;
   width: 32px;
   height: 32px;
   border-radius: 50%;
@@ -373,15 +401,24 @@ img {
   background: var(--basic-white);
 }
 
+.navigation-search:hover .consumer-navigation-search {
+  display: block;
+}
+
 /* Search */
 
 .consumer-navigation-search {
+  /*display: none;*/
+  position: absolute;
+  top: 35px;
+  right: 0;
   width: 341px;
   height: 84px;
   text-align: center;
   background: var(--basic-light-grayish-yellow);
   box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.4);
   border-radius: 4px;
+  z-index: 1;
 }
 
 .consumer-search ::placeholder {
@@ -397,6 +434,7 @@ img {
   outline: none;
   border: 2px solid var(--basic-focus);
 }
+
 
 .consumer-navigation-search input {
   width: 311px;
@@ -432,34 +470,6 @@ img {
   text-decoration: none;
   color: var(--basic-white);
 }
-
-
-
-/* Input */
-
-/*input[type="text"],
-input[type="email"],
-input[type="password"],
-textarea[name="comment"] {
-  box-sizing: border-box;
-}
-
-input[type="text"]:hover,
-input[type="email"]:hover,
-input[type="password"]:hover,
-textarea[name="comment"]:hover {
-  outline: none;
-  border: 2px solid var(--basic-hover);
-}
-
- input[type="text"]:focus,
- input[type="email"]:focus,
- input[type="password"]:focus,
- textarea[name="comment"]:focus {
-  outline: none;
-  border: 2px solid var(--basic-focus);
-}*/
-
 
 .entrance,
 .basket {
@@ -1490,7 +1500,7 @@ fieldset:nth-child(4n) {
 
 /* Registration */
 
-.modal-login {
+.entrance-login {
   width: 277px;
   height: 214px;
   background: var(--basic-light-grayish-yellow);
@@ -1510,12 +1520,12 @@ fieldset:nth-child(4n) {
   color: var(--basic-very-dark-gray);
 }
 
-.modal .login-form {
+.entrance-login .login-form {
   display: grid;
   gap: 20px;
 }
 
-.modal-login input {
+.entrance-login input {
   width: 241px;
   height: 44px;
   padding-left: 10px;
@@ -1525,24 +1535,24 @@ fieldset:nth-child(4n) {
   box-sizing: border-box;
 }
 
-.modal-login input:hover {
+.entrance-login input:hover {
   outline: none;
   border: 2px solid var(--basic-hover);
 }
 
-.modal-login input:focus {
+.entrance-login input:focus {
   outline: none;
   border: 2px solid var(--basic-focus);
 }
 
-.modal-login-button {
+.entrance-login-button {
   width: 103px;
   padding: 12px 0;
   font-size: 18px;
   line-height: 16px;
 }
 
-.modal a {
+.entrance-login a {
   font-style: normal;
   font-weight: normal;
   font-size: 13px;
@@ -1609,6 +1619,15 @@ fieldset:nth-child(4n) {
   width: 428px;
   margin: 0 auto;
 }
+
+.modal-contact a {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 15px;
+  color: var(--basic-very-dark-gray);
+}
+
 
 .modal-contact input {
   width: 267px;
