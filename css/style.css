@@ -1565,7 +1565,7 @@ fieldset:nth-child(4n) {
   left: 0;
   margin: auto;
   display: grid;
-  display: non;
+  display: none;
   width: 477px;
   height: 441px;
   background: var(--basic-light-grayish-yellow);
