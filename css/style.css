@@ -232,8 +232,46 @@ img {
 
 /* Dropdown */
 
+.dropdown-wrapping {
+  position: relative;
+  display: inline-block;
+}
+
 .dropdown-content {
   display: none;
+  position: absolute;
+  background-color: var(--basic-white);
+  min-width: 143px;
+  box-shadow: 0px 20px 20px rgba(0,0,0,0.4);
+  border-radius: 4px;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: var(--basic-very-dark-gray);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.dropdown-content a:hover {
+  background-color: var(--basic-light-grayish-red);
+}
+
+.dropdown-content a:focus,
+.dropdown-content a:active {
+  background: var(--basic-very-soft-red);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/*.dropdown-content {
   position: absolute;
   width: 143px;
   height: 170px;
@@ -288,7 +326,7 @@ img {
   line-height: 16px;
   background: var(--basic-light-grayish-red);
   border-radius: 0;
-}
+}*/
 /*
 .dropdown-content a:active {
   background: var(--basic-very-soft-red);
@@ -370,6 +408,7 @@ img {
   color: var(--basic-very-dark-gray);
   border: 1px solid #D3D3D2;
   box-sizing: border-box;
+  outline: none;
   border-radius: 4px;
 }
 
@@ -398,11 +437,19 @@ img {
 
 /* Input */
 
+/*input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea[name="comment"] {
+  box-sizing: border-box;
+}
+
 input[type="text"]:hover,
 input[type="email"]:hover,
 input[type="password"]:hover,
 textarea[name="comment"]:hover {
   outline: none;
+  border: 2px solid var(--basic-hover);
 }
 
  input[type="text"]:focus,
@@ -410,7 +457,8 @@ textarea[name="comment"]:hover {
  input[type="password"]:focus,
  textarea[name="comment"]:focus {
   outline: none;
-}
+  border: 2px solid var(--basic-focus);
+}*/
 
 
 .entrance,
@@ -659,6 +707,7 @@ fieldset:nth-child(4n) {
   margin: 0;
   padding: 0;
   margin-left: 5px;
+  outline: none;
   border: none;
   background: var(--basic-price);
   color: var(--basic-white);
@@ -1167,9 +1216,21 @@ fieldset:nth-child(4n) {
 
 .subscription-to-newsletter input {
   width: 368px;
-  padding: 12px 0;
-  border: 1px solid rgba(178, 178, 178, 0.52);
+  height: 44px;
+  padding-left: 10px;
+  border: 1px solid var(--basic-hover);
   border-radius: 6px;
+  box-sizing: border-box;
+}
+
+.subscription-to-newsletter input:hover {
+  outline: none;
+  border: 2px solid var(--basic-hover)
+}
+
+.subscription-to-newsletter input:focus {
+  outline: none;
+  border: 2px solid var(--basic-focus);
 }
 
 .subscription-to-newsletter ::placeholder {
@@ -1456,10 +1517,22 @@ fieldset:nth-child(4n) {
 
 .modal-login input {
   width: 241px;
-  padding: 12px 0;
+  height: 44px;
+  padding-left: 10px;
   background: var(--basic-white);
   border: 1px solid var(--basic-grayish-yellow);
   border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.modal-login input:hover {
+  outline: none;
+  border: 2px solid var(--basic-hover);
+}
+
+.modal-login input:focus {
+  outline: none;
+  border: 2px solid var(--basic-focus);
 }
 
 .modal-login-button {
@@ -1492,7 +1565,7 @@ fieldset:nth-child(4n) {
   left: 0;
   margin: auto;
   display: grid;
-  display: none;
+  display: non;
   width: 477px;
   height: 441px;
   background: var(--basic-light-grayish-yellow);
@@ -1539,10 +1612,31 @@ fieldset:nth-child(4n) {
 
 .modal-contact input {
   width: 267px;
-  padding: 12px 0;
+  height: 44px;
+  padding-left: 10px;
   background: var(--basic-white);
   border: 1px solid rgba(178, 178, 178, 0.52);
   border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.modal-contact textarea {
+  width: 428px;
+  min-height: 154px;
+  padding-left: 10px;
+  box-sizing: border-box;
+}
+
+.modal-contact input:hover,
+.modal-contact textarea:hover {
+  outline: none;
+  border: 2px solid var(--basic-hover);
+}
+
+.modal-contact input:focus,
+.modal-contact textarea:focus {
+  outline: none;
+  border: 2px solid var(--basic-focus);
 }
 
 .modal-contact textarea {
