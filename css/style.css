@@ -28,9 +28,11 @@
   --basic-hover: rgba(178, 178, 178, 0.52);
   --basic-focus: rgba(46, 136, 228, 0.52);
   --basic-border-bottom: rgba(255, 255, 255, 0.2);
+  --basic-border-list-ice: rgba(50, 50, 50, 0.2);
   --basic-scale: rgba(248, 247, 244, 0.5);
   --basic-backlight: linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%);
   --basic-price: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%);
+  --basic-modal-close: #231f20;
 }
 
 /* Grid */
@@ -149,17 +151,23 @@ img {
 .main-header {
   position: relative;
   display: grid;
+  grid-template-columns: min-content 1fr;
 }
 
 /* Main header logo */
 
+.main-header-logo {
+  width: 154px;
+  height: 64px;
+  margin-top: 9px;
+}
 
 /* Main navigation */
 
 .main-navigation {
   display: grid;
-  grid-template-columns: min-content 1fr 1fr;
-  width: 1146px;
+  grid-template-columns: 1fr 1fr;
+  width: 992px;
   margin-top: 9px;
   gap: 20px;
   justify-self: center;
@@ -167,7 +175,7 @@ img {
 
 
 .main-navigation-wrapper {
-  margin-right: 30px;
+  margin-left: 30px;
 }
 
 
@@ -188,16 +196,12 @@ img {
   margin-top: 20px;
 }
 
-.dropdown {
-  margin-right: 10px;
-}
-
-.site-navigation a {
+.site-navigation .navigation-link {
   padding: 5px 10px;
   color: var(--basic-white);
 }
 
-.site-navigation a:hover {
+.site-navigation .navigation-link:hover {
   font-weight: bold;
   padding: 5px 10px;
   font-size: 16px;
@@ -209,18 +213,92 @@ img {
   text-decoration: none;
 }
 
-.site-navigation a:active {
+.site-navigation .navigation-link:active {
   background-color: var(--basic-very-light-gray);
   box-shadow: inset 0px 2px 1px #696969;
   border-radius: 26px;
 }
 
-.site-navigation a:focus {
+.site-navigation .navigation-link:focus {
   background: var(--basic-moderate-red);
   padding: 5px 10px;
   border-radius: 26px;
   text-decoration: none;
 }
+
+.dropdown {
+  margin-right: 10px;
+}
+
+/* Dropdown */
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  width: 143px;
+  height: 170px;
+  margin-top: 10px;
+  background: var(--basic-white);
+  list-style: none;
+  box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.4);
+  border-radius: 4px;
+}
+
+.dropdown-content li {
+  width: 128px;
+  height: 32px;
+  display: block;
+  margin: 0;
+  border: 1px solid #d84732;
+}
+
+.dropdown-content li:nth-child(1) {
+  border-bottom: 1px solid var(--basic-border-list-ice);
+
+}
+
+.dropdown-content .drop-down-list {
+  margin: 0;
+  padding: 8px 14px;
+  text-decoration: none;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  align-items: center;
+  color: var(--basic-very-dark-gray);
+}
+
+.dropdown-content .list-ice {
+  padding: 8px 1px 8px 14px;
+}
+
+.drop-down-list b {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.dropdown-content li:hover{
+  padding: 0;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  background: var(--basic-light-grayish-red);
+  border-radius: 0;
+}
+/*
+.dropdown-content a:active {
+  background: var(--basic-very-soft-red);
+}
+
+.dropdown-content a:focus {
+  border-radius: 0;
+}*/
+
+
 
 /* Consumer-navigation */
 
@@ -316,52 +394,7 @@ img {
   color: var(--basic-white);
 }
 
-/* Dropdown */
 
-.dropdown-content {
-  width: 143px;
-  height: 171px;
-  background: var(--basic-white);
-  list-style: none;
-  box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.4);
-  border-radius: 4px;
-}
-
-.dropdown-content a {
-   display: block;
-   padding: 8px 14px;
-   text-decoration: none;
-   font-style: normal;
-   font-weight: normal;
-   font-size: 14px;
-   line-height: 16px;
-   align-items: center;
-   color: var(--basic-very-dark-gray);
-}
-
-.drop-down-list b {
-  font-style: normal;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 18px;
-}
-
-.dropdown-content a:hover {
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 16px;
-  background: var(--basic-light-grayish-red);
-  border-radius: 0;
-}
-
-.dropdown-content a:active {
-  background: var(--basic-very-soft-red);
-}
-
-.dropdown-content a:focus {
-  border-radius: 0;
-}
 
 /* Input */
 
@@ -541,12 +574,11 @@ fieldset:nth-child(4n) {
 
 .sorting-filter option {
   font-style: normal;
-  font-weight: normal;
+  font-weight: 400;
   font-size: 14px;
   line-height: 16px;
 }
 
-.sorting-filter select:hover,
 .sorting-filter select:focus,
 .sorting-filter select:active {
   outline: none;
@@ -698,7 +730,6 @@ fieldset:nth-child(4n) {
   opacity: 0.8;
 }
 
-
 /* Checkbox */
 
 .checkbox-control {
@@ -770,11 +801,7 @@ fieldset:nth-child(4n) {
   outline: none;
 }
 
-
-
 /*Слайд*/
-
-
 
 .slider {
   position: relative;
@@ -1188,10 +1215,11 @@ fieldset:nth-child(4n) {
 /* Map */
 
 .contacts {
+  position: relative;
   width: 1146px;
   height: 430px;
-  background: url(../img/icons/morozhenko-carta.svg) no-repeat 265px 135px,
-              url(../img/fons/cart.png) no-repeat;
+  /*background: url(../img/icons/morozhenko-carta.svg) no-repeat 265px 135px,
+              url(../img/fons/cart.png) no-repeat;*/
 }
 
 .contacts .contact-wrap {
@@ -1201,12 +1229,14 @@ fieldset:nth-child(4n) {
 }
 
 .contacts .address {
+  position: absolute;
+  top: 50px;
+  left: 800px;
+  right: 0;
   width: 303px;
   height: 306px;
   justify-self: right;
   text-align: center;
-  margin-top: 62px;
-  margin-right: 27px;
   border-radius: 16px;
   background-color: var(--basic-white);
   color: var(--basic-very-dark-gray);
@@ -1397,6 +1427,7 @@ fieldset:nth-child(4n) {
   color: var(--basic-white);
 }
 
+/* Registration */
 
 .modal-login {
   width: 277px;
@@ -1451,18 +1482,54 @@ fieldset:nth-child(4n) {
   grid-template-columns: 1fr 1fr;
 }
 
+/* Modal-contact */
+
 .modal-contact {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
   display: grid;
-  gap: 10px;
+  display: none;
   width: 477px;
   height: 441px;
   background: var(--basic-light-grayish-yellow);
+  background-position: 0 0;
+  background-repeat: repeat;
   border-radius: 6px;
-  margin-top: 30px;
+}
+
+.modal-close {
+  position: absolute;
+  top: 13px;
+  left: 440px;
+  width: 18px;
+  height: 17px;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.modal-close::before,
+.modal-close::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 18px;
+  height: 17px;
+  background-image: url(../img/svg/X-big.svg);
+}
+
+.modal-close:focus,
+.modal-close:active {
+  outline: none;
 }
 
 .modal-contact h2 {
-  padding: 20px 0 10px 23px;
+  padding: 20px 0 0 23px;
 }
 
 .feedback-wrapper {
