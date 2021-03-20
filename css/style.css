@@ -149,6 +149,7 @@ img {
 /* Main header */
 
 .main-header {
+  min-width: 1146px;
   position: relative;
   display: grid;
   grid-template-columns: min-content 1fr;
@@ -1177,6 +1178,7 @@ fieldset:nth-child(4n) {
   width: 267px;
   margin: 0 auto;
   margin-top: 6px;
+  object-fit: contain;
 }
 
 .normal-state .text {
@@ -1274,7 +1276,7 @@ fieldset:nth-child(4n) {
   gap: 26px;
   width: 1146px;
   margin: 0 auto;
-  margin-bottom: 80px;
+  margin-bottom: 40px;
 }
 
 .news {
@@ -1396,8 +1398,9 @@ fieldset:nth-child(4n) {
 
 .contacts {
   position: relative;
-  width: 1146px;
+  width: 1200px;
   height: 430px;
+  margin: 0 auto;
   /*background: url(../img/icons/morozhenko-carta.svg) no-repeat 265px 135px,
               url(../img/fons/cart.png) no-repeat;*/
 }
@@ -1411,28 +1414,40 @@ fieldset:nth-child(4n) {
 .contacts .address {
   position: absolute;
   top: 50px;
-  left: 800px;
-  right: 0;
+  left: 840px;
+  display: flex;
+  flex-wrap: wrap;
   width: 303px;
   height: 306px;
   justify-self: right;
-  text-align: center;
   border-radius: 16px;
   background-color: var(--basic-white);
   color: var(--basic-very-dark-gray);
 }
 
 .address p {
+  margin: 0;
+  margin-left: 25px;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
 }
 
-.address b {
+.address p:first-child {
+  margin-top: 32px;
+}
+
+.address p:nth-child(2) {
+  margin-top: 0;
+  margin-bottom: 25px;
   font-weight: bold;
   font-size: 18px;
   line-height: 24px;
+}
+
+.address p:nth-child(3) {
+  margin-bottom: 25px;
 }
 
 .contacts-phone {
@@ -1445,7 +1460,8 @@ fieldset:nth-child(4n) {
 
 .contacts-button {
   width: 253px;
-  margin-bottom: 40px;
+  margin-left: 25px;
+  margin-bottom: 31px;
   padding: 10px 0;
 }
 
@@ -1529,6 +1545,7 @@ fieldset:nth-child(4n) {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   width: 1146px;
+  margin: 0 auto;
 }
 
 .footer-social,
