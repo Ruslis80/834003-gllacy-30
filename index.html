@@ -443,18 +443,23 @@
           </div>
         </div>
       </footer>
-      <section class="modal modal-contact">
+      <section class="modal-contact">
         <h2>Мы обязательно вам ответим!</h2>
-        <div class="feedback-wrapper">
-          <form class="login-form" action="https://echo.htmlacademy.ru" method="POST">
-            <input type="text" name="username" placeholder="Имя Фамилия">
-            <input type="email" placeholder="email@example.com">
-            <textarea name="comment" rows="8" cols="40" placeholder="В свободной форме"></textarea>
-            <button class="button modal-contact-button" type="submit">Отправить</button>
-          </form>
-          <button class="modal-close" type="button" aria-label="Закрыть"></button>
-        </div>
+        <form class="login-form" action="https://echo.htmlacademy.ru" method="POST">
+          <p>
+            <label class="visually-hidden" for="first-name-last-name">Введите ваше имя и фамилию</label>
+            <input class="name-icon-user" id="first-name-last-name" type="text" name="username" placeholder="Имя Фамилия">
+          </p>
+          <p>
+            <label class="visually-hidden" for="password">Введите ваш имэйл</label>
+            <input class="password-icon" id="password" type="email" placeholder="email@example.com">
+          </p>
+          <textarea name="comment" rows="8" cols="40" placeholder="В свободной форме"></textarea>
+          <button class="button modal-contact-button" type="submit">Отправить</button>
+        </form>
+        <button class="modal-close" type="button" aria-label="Закрыть"></button>
       </section>
     </div>
+    <script src="js/modal.js"></script>
   </body>
 </html>
