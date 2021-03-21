@@ -56,13 +56,65 @@
                        </svg> Вход
                       </div>
                     </a>
+                    <div class="entrance-login">
+                      <h2 class="visually-hidden">Личный кабинет</h2>
+                      <div class="wrapping-modal">
+                        <form class="login-form" action="https://echo.htmlacademy.ru" method="POST">
+                          <input type="email" name="login" placeholder="email@example.com">
+                          <input type="password" name="password" placeholder="••••••">
+                          <div class="registration">
+                            <button class="button entrance-login-button" type="button">Войти</button>
+                            <div class="">
+                              <a class="restor" href="#">Забыли пароль?</a>
+                              <a class="register" href="#">Новая регистрация</a>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
                  </li>
-                 <li class="basket basket-catalog"><a href="#"><div class="navigation-basket navigation-basket-catalog"><svg width="21" height="20" viewBox="0 0 21 20" transform="translate(-3 5)" fill="none" xmlns="http://www.w3.org/2000/svg">
-                   <path d="M5.70345 2L5.46161 0H0V2H3.66795L5.17946 15H19.2869L21 2H5.70345ZM17.5034 13H6.97313L5.96545 4H18.6924L17.5034 13Z" fill="white"/>
-                   <path d="M7.03359 20C8.14664 20 9.04894 19.1046 9.04894 18C9.04894 16.8954 8.14664 16 7.03359 16C5.92054 16 5.01823 16.8954 5.01823 18C5.01823 19.1046 5.92054 20 7.03359 20Z" fill="white"/>
-                   <path d="M16.1027 20C17.2157 20 18.118 19.1046 18.118 18C18.118 16.8954 17.2157 16 16.1027 16C14.9896 16 14.0873 16.8954 14.0873 18C14.0873 19.1046 14.9896 20 16.1027 20Z" fill="white"/>
-                   <rect width="12" height="9" x="6" y="4" rx="2" fill="#E84D37"/>
-                   </svg> 2 товара</div></a>
+                 <li class="basket basket-catalog">
+                   <a href="#">
+                     <div class="navigation-basket navigation-basket-catalog">
+                       <svg width="21" height="20" viewBox="0 0 21 20" transform="translate(-3 5)" fill="none" xmlns="http://www.w3.org/2000/svg">
+                         <path d="M5.70345 2L5.46161 0H0V2H3.66795L5.17946 15H19.2869L21 2H5.70345ZM17.5034 13H6.97313L5.96545 4H18.6924L17.5034 13Z" fill="white"/>
+                         <path d="M7.03359 20C8.14664 20 9.04894 19.1046 9.04894 18C9.04894 16.8954 8.14664 16 7.03359 16C5.92054 16 5.01823 16.8954 5.01823 18C5.01823 19.1046 5.92054 20 7.03359 20Z" fill="white"/>
+                         <path d="M16.1027 20C17.2157 20 18.118 19.1046 18.118 18C18.118 16.8954 17.2157 16 16.1027 16C14.9896 16 14.0873 16.8954 14.0873 18C14.0873 19.1046 14.9896 20 16.1027 20Z" fill="white"/>
+                         <rect width="12" height="9" x="6" y="4" rx="2" fill="#E84D37"/>
+                       </svg> 2 товара
+                      </div>
+                    </a>
+                    <div class="basket-of-goods">
+                      <table class="basket-of-goods-table">
+                        <tr class="text">
+                          <td>&#10005;</td>
+                          <td><img src="img/ice/ice-cream-table.jpg" width="33" height="33" alt="ice"></td>
+                          <td>Пломбир с апельсиновым джемом</td>
+                          <td>1,5 кг &times; <span>200 руб.</span></td>
+                          <td>300 руб.</td>
+                        </tr>
+                        <tr class="text">
+                          <td class="text-line">&#10005;</td>
+                          <td class="text-line"><img src="img/ice/table-ice-cream-strawberry.jpg" width="33" height="33" alt="ice"></td>
+                          <td class="text-line">Клубничный пломбир с присыпкой<br>
+                            из белого шоколада</td>
+                          <td class="text-line">1,5 кг &times; <span>300 руб.</span></td>
+                          <td class="text-line">450 руб.</td>
+                        </tr>
+                        <tr class="text">
+                          <td class="text-bottom" colspan="5"></td>
+                        </tr>
+                        <tr class="text">
+                          <td class="basket-of-goods-total" colspan="5">Итого: 750 руб.</td>
+                        </tr>
+                        <tr>
+                          <td class="basket-of-goods-button" colspan="5">
+                            <div class="button-wrapper">
+                              <button class="button shopping-cart-button" type="submit">Оформить заказ</button>
+                           </div>
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
                  </li>
                  <li class="consumer-navigation-info">
                    <div class="info">
@@ -464,38 +516,7 @@
                </div>
               </div>
          </footer>
-         <section class="basket-of-goods">
-           <table class="basket-of-goods-table">
-              <tr class="text">
-                <td>&#10005;</td>
-                <td><img src="img/ice/ice-cream-table.jpg" width="33" height="33" alt="ice"></td>
-                <td>Пломбир с апельсиновым джемом</td>
-                <td>1,5 кг &times; <span>200 руб.</span></td>
-                <td>300 руб.</td>
-              </tr>
-              <tr class="text">
-                <td class="text-line">&#10005;</td>
-                <td class="text-line"><img src="img/ice/table-ice-cream-strawberry.jpg" width="33" height="33" alt="ice"></td>
-                <td class="text-line">Клубничный пломбир с присыпкой<br>
-                  из белого шоколада</td>
-                <td class="text-line">1,5 кг &times; <span>300 руб.</span></td>
-                <td class="text-line">450 руб.</td>
-              </tr>
-              <tr class="text">
-                <td class="text-bottom" colspan="5"></td>
-              </tr>
-              <tr class="text">
-                <td class="basket-of-goods-total" colspan="5">Итого: 750 руб.</td>
-              </tr>
-              <tr>
-                <td class="basket-of-goods-button" colspan="5">
-                  <div class="button-wrapper">
-                    <button class="button shopping-cart-button" type="submit">Оформить заказ</button>
-                 </div>
-                </td>
-              </tr>
-           </table>
-         </section>
+
          </div>
        </div>
       </div>

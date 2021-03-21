@@ -512,7 +512,7 @@ img {
 /* Entrance-Registration */
 
 .entrance-login {
-  /*display: none;*/
+  display: none;
   position: absolute;
   top: 35px;
   right: 0;
@@ -615,10 +615,15 @@ img {
 /* Basket-Catalog */
 
 .basket-catalog {
+  position: relative;
   width: 118px;
   height: 32px;
   background: var(--basic-white);
   border-radius: 20px;
+}
+
+.basket-catalog:hover .basket-of-goods {
+  display: block;
 }
 
 .basket-catalog a,
@@ -632,6 +637,65 @@ img {
   height: 32px;
   text-align: center;
 }
+
+/* Table */
+
+.basket-of-goods {
+  display: none;
+  position: absolute;
+  top: 35px;
+  right: 0;
+  width: 539px;
+  height: 242px;
+  background: var(--basic-light-grayish-yellow);
+  box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.4);
+  border-radius: 4px;
+}
+
+.basket-of-goods img {
+  border-radius: 50%;
+}
+
+.basket-of-goods-table {
+  width: 510px;
+  border-collapse:separate;
+  border-spacing: 10px;
+}
+
+
+.basket-of-goods .text {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 16px;
+  color: var(--basic-very-dark-gray);
+}
+
+.text-bottom {
+  border-bottom: 1px solid #CACAC7;
+}
+
+.basket-of-goods-total {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 15px;
+  text-align: right;
+}
+
+.button-wrapper {
+  text-align: right;
+}
+
+.shopping-cart-button {
+  width: 172px;
+  height: 44px;
+}
+
+.text span {
+  color: var(--basic-dark-gray);
+}
+
+
 
 /* Breadcrumbs */
 
@@ -1414,7 +1478,7 @@ fieldset:nth-child(4n) {
 .contacts .address {
   position: absolute;
   top: 50px;
-  left: 840px;
+  left: 850px;
   display: flex;
   flex-wrap: wrap;
   width: 303px;
@@ -1737,53 +1801,3 @@ fieldset:nth-child(4n) {
 .modal ::placeholder {
   padding-left: 10px;
 }
-
-/* Table */
-
-.basket-of-goods {
-  width: 539px;
-  height: 242px;
-  background: var(--basic-light-grayish-yellow);
-  box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.4);
-  border-radius: 4px;
-}
-
-.basket-of-goods-table {
-  width: 510px;
-  border-collapse:separate;
-  border-spacing: 10px;
-}
-
-
-.basket-of-goods .text {
-  font-style: normal;
-  font-weight: normal;
-  font-size: 13px;
-  line-height: 16px;
-  color: var(--basic-very-dark-gray);
-}
-
-.text-bottom {
-  border-bottom: 1px solid #CACAC7;
-}
-
-.basket-of-goods-total {
-  font-style: normal;
-  font-weight: bold;
-  font-size: 15px;
-  text-align: right;
-}
-
-.button-wrapper {
-  text-align: right;
-}
-
-.shopping-cart-button {
-  width: 172px;
-  height: 44px;
-}
-
-.text span {
-  color: var(--basic-dark-gray);
-}
-
