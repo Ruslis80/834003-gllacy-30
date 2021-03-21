@@ -81,8 +81,14 @@
                     <h2 class="visually-hidden">Личный кабинет</h2>
                     <div class="wrapping-modal">
                       <form class="login-form" action="https://echo.htmlacademy.ru" method="POST">
-                        <input type="email" name="login" placeholder="email@example.com">
-                        <input type="password" name="password" placeholder="••••••">
+                        <p>
+                         <label class="visually-hidden" for="login-login">Логин</label>
+                         <input class="login-icon-user" id="login-login" type="email" name="login" placeholder="email@example.com">
+                        </p>
+                        <p>
+                         <label class="visually-hidden" for="login-password">Пароль</label>
+                         <input class="login-icon-password" id="login-password" type="password" name="password" placeholder="••••••">
+                        </p>
                         <div class="registration">
                           <button class="button entrance-login-button" type="button">Войти</button>
                           <div class="">
@@ -445,7 +451,7 @@
       </footer>
       <section class="modal-contact">
         <h2>Мы обязательно вам ответим!</h2>
-        <form class="login-form" action="https://echo.htmlacademy.ru" method="POST">
+        <form class="modal-form" action="https://echo.htmlacademy.ru" method="POST">
           <p>
             <label class="visually-hidden" for="first-name-last-name">Введите ваше имя и фамилию</label>
             <input class="name-icon-user" id="first-name-last-name" type="text" name="username" placeholder="Имя Фамилия">
