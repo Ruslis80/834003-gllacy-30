@@ -430,18 +430,6 @@ img {
   margin: 0;
 }
 
-/*.navigation-entrance {
-  width: 92px;
-  height: 32px;
-  text-align: center;
-  background: var(--basic-border-bottom);
-  border-radius: 20px;
-}
-
-.navigation-entrance:hover {
-  background: var(--basic-white);
-}*/
-
 /* Entrance-Registration */
 
 .entrance-login {
@@ -538,23 +526,6 @@ img {
   height: 32px;
 }
 
-.navigation-basket {
-  width: 92px;
-  height: 32px;
-  text-align: center;
-  background: var(--basic-border-bottom);
-  border-radius: 20px;
-}
-
-.navigation-basket:hover {
-  background: var(--basic-white);
-}
-
-.basket a:hover,
-.navigation-basket:hover path {
-  fill: var(--basic-very-dark-gray);
-  color: var(--basic-very-dark-gray);
-}
 
 /* Basket-Catalog */
 
@@ -565,35 +536,34 @@ img {
   background: var(--basic-white);
   border-radius: 20px;
 }
-
+.basket-catalog:focus-within .basket-of-goods,
 .basket-catalog:hover .basket-of-goods {
-  display: block;
-}
-
-.basket-catalog a,
-.basket-catalog path {
-  fill: var(--basic-very-dark-gray);
-  color: var(--basic-very-dark-gray);
-}
-
-.navigation-basket-catalog {
-  width: 118px;
-  height: 32px;
-  text-align: center;
+  /*display: block;*/
+  clip: auto;
+  width: auto;
+  height: auto;
+  margin: 0;
 }
 
 /* Table */
 
 .basket-of-goods {
-  display: none;
+  /*display: none;*/
   position: absolute;
   top: 35px;
   right: 0;
   width: 539px;
-  height: 242px;
+  padding: 0;
+  padding-bottom: 7px;
+  list-style: none;
   background: var(--basic-light-grayish-yellow);
   box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.4);
   border-radius: 4px;
+
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
 }
 
 .basket-of-goods img {
@@ -602,10 +572,14 @@ img {
 
 .basket-of-goods-table {
   width: 510px;
+  margin: 0 auto;
   border-collapse:separate;
   border-spacing: 10px;
 }
 
+.basket-of-goods-table td {
+  padding-top: 2px;
+}
 
 .basket-of-goods .text {
   font-style: normal;
@@ -613,6 +587,11 @@ img {
   font-size: 13px;
   line-height: 16px;
   color: var(--basic-very-dark-gray);
+  padding-top: 5px;
+}
+
+.basket-of-goods-table .text-line {
+  padding-top: 20px;
 }
 
 .text-bottom {
