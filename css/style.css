@@ -553,6 +553,7 @@ img {
   border: 1px solid var(--basic-grayish-yellow);
   border-radius: 4px;
   box-sizing: border-box;
+  outline: none;
 }
 
 .entrance-login input:hover {
@@ -1469,22 +1470,22 @@ fieldset:nth-child(4n) {
 
 /* Map */
 
-.contacts {
+.contact {
   position: relative;
   width: 1200px;
   height: 430px;
   margin: 0 auto;
-  /*background: url(../img/icons/morozhenko-carta.svg) no-repeat 265px 135px,
-              url(../img/fons/cart.png) no-repeat;*/
+  background: url(../img/icons/morozhenko-carta.svg) no-repeat 265px 135px,
+              url(../img/fons/cart.png) no-repeat;
 }
 
-.contacts .contact-wrap {
+.contact .contact-wrap {
   width: 1146px;
   display: grid;
   grid-template-columns: 1fr;
 }
 
-.contacts .address {
+.address {
   position: absolute;
   top: 50px;
   left: 850px;

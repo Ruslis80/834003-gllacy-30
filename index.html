@@ -11,6 +11,7 @@
     <link rel="manifest" href="manifest.webmanifest">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=<d38a1bc0-b7f6-418f-b6c0-9ec1ba4d3bc2>" type="text/javascript"></script>
   </head>
   <body class="page-body">
     <div class="site-wrapper site-wrapper-1">
@@ -347,8 +348,8 @@
          </div>
        </main>
       </div>
-      <section class="contacts">
-        <div style="position:relative;overflow:hidden;"><a href="https://yandex.ru/maps/2/saint-petersburg/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Санкт‑Петербург</a><a href="https://yandex.ru/maps/2/saint-petersburg/?feedback=object%2Fedit&from=api-maps&ll=30.323117%2C59.938635&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fll%3D30.323%252C59.939%26spn%3D0.001%252C0.001%26text%3D%25D0%25A0%25D0%25BE%25D1%2581%25D1%2581%25D0%25B8%25D1%258F%252C%2520%25D0%25A1%25D0%25B0%25D0%25BD%25D0%25BA%25D1%2582-%25D0%259F%25D0%25B5%25D1%2582%25D0%25B5%25D1%2580%25D0%25B1%25D1%2583%25D1%2580%25D0%25B3%252C%2520%25D0%2591%25D0%25BE%25D0%25BB%25D1%258C%25D1%2588%25D0%25B0%25D1%258F%2520%25D0%259A%25D0%25BE%25D0%25BD%25D1%258E%25D1%2588%25D0%25B5%25D0%25BD%25D0%25BD%25D0%25B0%25D1%258F%2520%25D1%2583%25D0%25BB%25D0%25B8%25D1%2586%25D0%25B0%252C%252019%252F8&utm_medium=mapframe&utm_source=maps&z=17" style="color:#eee;font-size:12px;position:absolute;top:14px;">Большая Конюшенная улица, 19/8 на карте Санкт-Петербурга, ближайшее метро Гостиный двор</a><iframe src="https://yandex.ru/map-widget/v1/-/CCUUYVT5~B" width="1200" height="430" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>
+      <div class="contact">
+        <!--<div id="map"></div>-->
           <div class="contact-wrap">
             <h2 class="visually-hidden">Карта</h2>
             <div class="address">
@@ -365,7 +366,7 @@
               <button class="button contacts-button" type="button">Форма обратной связи</button>
             </div>
           </div>
-        </section>
+      </div>
      <footer class="main-footer">
         <h2 class="visually-hidden">Давайте знакомиться</h2>
         <div class="main-footer-info">
@@ -467,5 +468,6 @@
       </section>
     </div>
     <script src="js/modal.js"></script>
+    <script src="js/carta.js"></script>
   </body>
 </html>
