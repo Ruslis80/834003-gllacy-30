@@ -127,7 +127,7 @@ img {
   background-image: url(../img/slide/slider-item-3.png);
 }
 
-.page-body-catalog .backlight {
+.backlight {
   min-width: 1200px;
   max-height: 656px;
   margin: 0;
@@ -139,23 +139,27 @@ img {
 /*   Content wrapper   */
 
 .container {
-  width: 1146px;
+  min-width: 1146px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 10px;
 }
 
 .main-container {
+  min-width: 1146px;
+  margin: 0 auto;
   margin-top: 120px;
 }
 
 .container-catalog {
+  width: 1146px;
   margin-top: 13px;
 }
 
 /* Main header */
 
 .main-header {
-  min-width: 1146px;
+  width: 1146px;
+  margin: 0 auto;
   position: relative;
   display: grid;
   grid-template-columns: min-content 1fr;
@@ -314,6 +318,7 @@ img {
   column-gap: 10px;
   margin: 0 auto;
   margin-top: 10px;
+  padding: 0;
   font-size: 14px;
   line-height: 16px;
   font-weight: 500;
