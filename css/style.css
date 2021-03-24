@@ -28,7 +28,8 @@
   --basic-pale-orange: #ffbc9e;
   --basic-white: #ffffff;
   --basic-tovar-shadow: rgba(172, 16, 0, 0.64);
-  --basic-hover: rgba(178, 178, 178, 0.52);
+  --basic-input: rgba(178, 178, 178, 0.52);
+  --basic-input-hover: rgba(178, 178, 178, 0.72);
   --basic-focus: rgba(46, 136, 228, 0.52);
   --basic-border-bottom: rgba(255, 255, 255, 0.2);
   --basic-border-list-ice: rgba(50, 50, 50, 0.2);
@@ -390,31 +391,27 @@ img {
   margin: 0;
 }
 
-.consumer-search ::placeholder {
-  padding-left: 10px;
+.consumer-navigation-search input {
+  width: 311px;
+  padding: 12px 20px;
+  background: var(--basic-white);
+  font-size: 16px;
+  line-height: 20px;
+  color: var(--basic-very-dark-gray);
+  border: 2px solid var(--basic-grayish-yellow);
+  box-sizing: border-box;
+  outline: none;
+  border-radius: 4px;
 }
 
 .consumer-search input:hover {
   outline: none;
-  border: 2px solid  var(--basic-hover);
+  border: 2px solid  var(--basic-input-hover);
 }
 
 .consumer-search input:focus {
   outline: none;
   border: 2px solid var(--basic-focus);
-}
-
-.consumer-navigation-search input {
-  width: 311px;
-  height: 44px;
-  background: var(--basic-white);
-  font-size: 16px;
-  line-height: 20px;
-  color: var(--basic-very-dark-gray);
-  border: 1px solid var(--basic-grayish-yellow);
-  box-sizing: border-box;
-  outline: none;
-  border-radius: 4px;
 }
 
 /* Entrance */
@@ -490,10 +487,10 @@ img {
 
 .entrance-login input {
   width: 241px;
-  height: 44px;
+  padding: 12px 20px;
   padding-left: 10px;
   background: var(--basic-white);
-  border: 1px solid var(--basic-grayish-yellow);
+  border: 2px solid var(--basic-grayish-yellow);
   border-radius: 4px;
   box-sizing: border-box;
   outline: none;
@@ -501,7 +498,7 @@ img {
 
 .entrance-login input:hover {
   outline: none;
-  border: 2px solid var(--basic-hover);
+  border: 2px solid var(--basic-input-hover);
 }
 
 .entrance-login input:focus {
@@ -1376,25 +1373,21 @@ fieldset:nth-child(4n) {
 
 .subscription-to-newsletter input {
   width: 368px;
-  height: 44px;
-  padding-left: 10px;
-  border: 1px solid var(--basic-hover);
+  padding: 12px 20px;
+  border: 2px solid var(--basic-input);
   border-radius: 6px;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
 .subscription-to-newsletter input:hover {
   outline: none;
-  border: 2px solid var(--basic-hover)
+  border: 2px solid var(--basic-input-hover);
 }
 
 .subscription-to-newsletter input:focus {
   outline: none;
   border: 2px solid var(--basic-focus);
-}
-
-.subscription-to-newsletter ::placeholder {
-  padding-left: 10px;
 }
 
 .button-subscription {
@@ -1698,32 +1691,34 @@ fieldset:nth-child(4n) {
 
 .modal-contact input {
   width: 267px;
-  height: 44px;
+  padding: 12px 20px;
   margin-left: 24px;
   padding-left: 10px;
   background: var(--basic-white);
-  border: 1px solid rgba(178, 178, 178, 0.52);
+  border: 2px solid var(--basic-input);
   border-radius: 4px;
   box-sizing: border-box;
 }
 
 .modal-contact textarea {
-  max-width: 428px;
-  max-height: 154px;
+  position: relative;
+  width: 428px;
+  height: 154px;
   margin-left: 24px;
   margin-bottom: 22px;
   padding-top: 10px;
   padding-left: 10px;
   background: var(--basic-white);
-  border: 1px solid rgba(178, 178, 178, 0.52);
+  border: 2px solid var(--basic-input);
   border-radius: 6px;
   box-sizing: border-box;
+  resize: none;
 }
 
 .modal-contact input:hover,
 .modal-contact textarea:hover {
   outline: none;
-  border: 2px solid var(--basic-hover);
+  border: 2px solid var(--basic-input-hover);
 }
 
 .modal-contact input:focus,
@@ -1733,8 +1728,10 @@ fieldset:nth-child(4n) {
 }
 
 .modal-contact-button {
+  position: absolute;
+  bottom: 25px;
+  right: 26px;
   width: 140px;
-  margin-left: 310px;
   padding: 10px 0;
 }
 
