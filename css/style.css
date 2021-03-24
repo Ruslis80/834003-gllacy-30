@@ -753,9 +753,12 @@ fieldset:nth-child(4n) {
 }
 
 .sorting-filter select {
+  display: block;
   width: 196px;
   padding-left: 15px;
-  appearance: none;
+  -webkit-appearance: none;/* Chrome */
+  -moz-appearance: none;/* Firefox */
+  appearance: none;/* убираем дефолнтные стрелочки */
   overflow: hidden;
   border: none;
   border-radius: 20px;
@@ -769,7 +772,6 @@ fieldset:nth-child(4n) {
   background-position: 170px 13px;
   color: var(--basic-white);
 }
-
 
 .sorting-filter option {
   font-style: normal;
