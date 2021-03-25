@@ -410,11 +410,12 @@ img {
 .consumer-navigation-search input {
   width: 311px;
   padding: 12px 20px;
+  padding-left: 14px;
   background: var(--basic-white);
   font-size: 16px;
   line-height: 20px;
   color: var(--basic-very-dark-gray);
-  border: 2px solid var(--basic-grayish-yellow);
+  border: 1px solid var(--basic-grayish-yellow);
   box-sizing: border-box;
   outline: none;
   border-radius: 4px;
@@ -423,11 +424,15 @@ img {
 .consumer-search input:hover {
   outline: none;
   border: 2px solid  var(--basic-input-hover);
+  padding: 11px 19px;
+  padding-left: 13px;
 }
 
 .consumer-search input:focus {
   outline: none;
   border: 2px solid var(--basic-focus);
+  padding: 11px 19px;
+  padding-left: 13px;
 }
 
 /* Entrance */
@@ -504,9 +509,9 @@ img {
 .entrance-login input {
   width: 241px;
   padding: 12px 20px;
-  padding-left: 10px;
+  padding-left: 14px;
   background: var(--basic-white);
-  border: 2px solid var(--basic-grayish-yellow);
+  border: 1px solid var(--basic-grayish-yellow);
   border-radius: 4px;
   box-sizing: border-box;
   outline: none;
@@ -515,11 +520,15 @@ img {
 .entrance-login input:hover {
   outline: none;
   border: 2px solid var(--basic-input-hover);
+  padding: 11px 19px;
+  padding-left: 13px;
 }
 
 .entrance-login input:focus {
   outline: none;
   border: 2px solid var(--basic-focus);
+  padding: 11px 19px;
+  padding-left: 13px;
 }
 
 .entrance-login-button {
@@ -1420,8 +1429,10 @@ fieldset:nth-child(4n) {
 
 .subscription-to-newsletter input {
   width: 368px;
-  padding: 12px 20px;
-  border: 2px solid var(--basic-input);
+  padding: 14px 14px;
+  padding-left: 14px;
+  margin-right: 9px;
+  border: 1px solid var(--basic-input);
   border-radius: 6px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -1430,11 +1441,15 @@ fieldset:nth-child(4n) {
 .subscription-to-newsletter input:hover {
   outline: none;
   border: 2px solid var(--basic-input-hover);
+  padding: 13px 13px;
+  padding-left: 13px;
 }
 
 .subscription-to-newsletter input:focus {
   outline: none;
   border: 2px solid var(--basic-focus);
+  padding: 13px 13px;
+  padding-left: 13px;
 }
 
 .button-subscription {
@@ -1480,8 +1495,14 @@ fieldset:nth-child(4n) {
   width: 1200px;
   height: 430px;
   margin: 0 auto;
-  background: url(../img/icons/morozhenko-carta.svg) no-repeat 265px 135px,
-              url(../img/fons/cart.png) no-repeat;
+  /*background: url(../img/icons/morozhenko-carta.svg) no-repeat 265px 135px,
+              url(../img/fons/cart.png) no-repeat;*/
+}
+
+.contact iframe {
+  width: 100%;
+  height: 430px;
+  border: none;
 }
 
 .contact .contact-wrap {
@@ -1493,7 +1514,7 @@ fieldset:nth-child(4n) {
 .address {
   position: absolute;
   top: 50px;
-  left: 850px;
+  right: 25px;
   display: flex;
   flex-wrap: wrap;
   width: 303px;
@@ -1714,7 +1735,7 @@ fieldset:nth-child(4n) {
   margin: auto;
   display: none;
   width: 477px;
-  height: 441px;
+  height: 451px;
   background: var(--basic-light-grayish-yellow);
   background-position: 0 0;
   background-repeat: repeat;
@@ -1728,7 +1749,7 @@ fieldset:nth-child(4n) {
 
 .modal-contact h2 {
   margin: 0;
-  margin: 20px 0 26px 24px;
+  margin: 20px 0 25px 24px;
   color: var(--basic-very-dark-gray);
 }
 
@@ -1738,11 +1759,11 @@ fieldset:nth-child(4n) {
 
 .modal-contact input {
   width: 267px;
-  padding: 12px 20px;
+  padding: 14px 14px;
   margin-left: 24px;
-  padding-left: 10px;
+  padding-left: 14px;
   background: var(--basic-white);
-  border: 2px solid var(--basic-input);
+  border: 1px solid var(--basic-input);
   border-radius: 4px;
   box-sizing: border-box;
 }
@@ -1752,26 +1773,41 @@ fieldset:nth-child(4n) {
   width: 428px;
   height: 154px;
   margin-left: 24px;
-  margin-bottom: 22px;
-  padding-top: 10px;
-  padding-left: 10px;
+  padding: 16px;
+  padding-left: 14px;
   background: var(--basic-white);
-  border: 2px solid var(--basic-input);
+  border: 1px solid var(--basic-input);
   border-radius: 6px;
   box-sizing: border-box;
   resize: none;
 }
 
-.modal-contact input:hover,
+.modal-contact input:hover {
+  outline: none;
+  border: 2px solid var(--basic-input-hover);
+  padding: 13px 13px;
+  padding-left: 13px;
+}
+
+.modal-contact input:focus {
+  outline: none;
+  border: 2px solid var(--basic-focus);
+  padding: 13px 13px;
+  padding-left: 13px;
+}
+
 .modal-contact textarea:hover {
   outline: none;
   border: 2px solid var(--basic-input-hover);
+  padding: 15px;
+  padding-left: 13px;
 }
 
-.modal-contact input:focus,
 .modal-contact textarea:focus {
   outline: none;
   border: 2px solid var(--basic-focus);
+  padding: 15px;
+  padding-left: 13px;
 }
 
 .modal-contact-button {
@@ -1780,10 +1816,6 @@ fieldset:nth-child(4n) {
   right: 26px;
   width: 140px;
   padding: 10px 0;
-}
-
-.modal ::placeholder {
-  padding-left: 10px;
 }
 
 /* Modal close */
