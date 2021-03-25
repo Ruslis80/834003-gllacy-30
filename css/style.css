@@ -148,7 +148,6 @@ img {
 .main-container {
   min-width: 1146px;
   margin: 0 auto;
-  margin-top: 100px;
 }
 
 .container-catalog {
@@ -260,12 +259,17 @@ img {
   padding-top: 5px;
   padding-left: 0;
   list-style: none;
+  z-index: 1;
 
 
-  clip: rect(0 0 0 0);
   width: 1px;
   height: 1px;
   margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .dropdown-wrapping .dropdown-link {
@@ -1024,8 +1028,8 @@ fieldset:nth-child(4n) {
   position: relative;
   width: 1146px;
   margin: 0 auto;
-  margin-bottom: 30px;
-  padding-top: 180px;
+  margin-bottom: 40px;
+  padding-top: 280px;
   text-align: center;
 }
 
@@ -1183,7 +1187,7 @@ fieldset:nth-child(4n) {
 
 .items {
   width: 286px;
-  /*height: 402px;*/
+  height: 402px;
   list-style: none;
 }
 
