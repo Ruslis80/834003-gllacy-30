@@ -1182,13 +1182,12 @@ fieldset:nth-child(4n) {
 }
 
 .items {
-  position: relative;
   width: 286px;
-  height: 402px;
+  /*height: 402px;*/
   list-style: none;
 }
 
-/*.tovar-list*/.items .weight {
+.items .weight {
   position: absolute;
   font-size: 45px;
   line-height: 45px;
@@ -1203,7 +1202,16 @@ fieldset:nth-child(4n) {
 }
 
 .items:hover .tovar-button {
-  display: block;
+  /*display: block;*/
+  clip: auto;
+  width: auto;
+  height: auto;
+  margin: 0;
+
+  margin: 0 auto;
+  margin-top: 10px;
+  padding: 10px 16px;
+  margin-bottom: 20px;
 }
 
 .items img {
@@ -1224,7 +1232,8 @@ fieldset:nth-child(4n) {
 }
 
 .normal-state {
-  position: absolute;
+  /*position: absolute;*/
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   width: 267px;
@@ -1254,13 +1263,24 @@ fieldset:nth-child(4n) {
 }
 
 .tovar-button {
-  display: none;
+  /*display: none;*/
   margin: 0 auto;
   margin-top: 10px;
   background: linear-gradient(180deg, var(--basic-light-bright-red) 0%, var(--basic-bright-red) 100%);
   box-shadow: 0px 2px 2px var(--basic-tovar-shadow);
   border-radius: 50px;
   padding: 10px 16px;
+  margin-bottom: 20px;
+  z-index: 1;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .tovar-button:hover {
